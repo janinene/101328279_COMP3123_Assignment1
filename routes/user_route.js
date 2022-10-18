@@ -4,7 +4,7 @@ const routes = express.Router()
 const userAccountModel = require('../models/UserAccount');
 
 
-/*
+/*  Sample username
     {
         "username" : "p@p.com",
         "password" : "password$123"
