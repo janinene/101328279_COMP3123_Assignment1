@@ -81,7 +81,6 @@ try{
             status: true,
             username: user_account_email.username,              
             email: user_account_email.email,
-            password: user_account_email.password,
             message: "User logged in succesfully"
         })
     }

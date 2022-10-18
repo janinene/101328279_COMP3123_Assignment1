@@ -35,9 +35,9 @@ const employeeSchema = new mongoose.Schema({
 
     salary : {
         type: Number,
-        require: true,
+        require: true
     },
-    
+
 })
 
 const Employee = mongoose.model("Employee", employeeSchema)

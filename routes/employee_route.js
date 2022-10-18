@@ -3,10 +3,7 @@ const mongoose = require("mongoose")
 const routes = express.Router()
 const employeeModel = require('../models/Employee')
 
-
-
-
-/*  Sample employees
+/*  Sample Employee
 {
     "first_name" : "Tam",
     "last_name" : "Harrow",
@@ -49,7 +46,9 @@ routes.get('/employees/:eid', async (req,res) => {
         return res.status(200).send(employs)
     }
     catch (error) {
-        return res.status(400).send(error)
+        return res.status(400).send({
+            message : "ID does not exists"
+        })
     }
 
 });
@@ -59,7 +58,10 @@ routes.get('/employees/:eid', async (req,res) => {
 routes.put('/employees/:eid', async (req,res) => {
     try {
         const updateEmployee = await employeeModel.findByIdAndUpdate(req.params.eid, req.body)
-        return res.status(200).send(updateEmployee)
+        return res.status(200).send({
+            updateEmployee,
+            message : "Succesfully updated"
+        })
     }
     catch (error) {
         return res.status(400).send(error)
@@ -82,7 +84,10 @@ routes.delete('/employees', async (req,res) => {
 
     }
     catch (error) {
-        return res.status(400).send(error)
+        return res.status(400).send({
+            error,
+            message : "ID does not exists"
+        })
     }
 
 });
