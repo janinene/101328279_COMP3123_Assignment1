@@ -6,7 +6,7 @@ const employeeModel = require('../models/Employee')
 
 
 
-/*
+/*  Sample employees
 {
     "first_name" : "Tam",
     "last_name" : "Harrow",
