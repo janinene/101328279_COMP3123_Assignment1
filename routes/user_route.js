@@ -12,18 +12,6 @@ const userAccountModel = require('../models/UserAccount');
 */
 
 
-// 3. All employee list
-// routes.get('/user/users', async (req,res) => {                   
-//     try {
-//         const employee = await userAccountModel.find()
-//         res.status(200).send(employee)
-//     }catch (error) {
-//         res.status(400).send(error)
-//     }
-
-// });
-
-
 // 1. Create new account
 routes.post('/user/signup', async(req,res) => {
     try {
@@ -94,7 +82,6 @@ try{
             status: true,
             username: user_account_email.username,              
             email: user_account_email.email,
-            password: user_account_email.password,
             message: "User logged in succesfully"
         })
     }
