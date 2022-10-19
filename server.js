@@ -11,7 +11,7 @@ const SERVER_PORT = 8080
 app.use(express.json())
 app.use(express.urlencoded())
 
-const DB_CONNECTION_STRING = "mongodb+srv://janineusana:mongodbjanine@cluster0.37gpaqg.mongodb.net/Assignment1_FullStack?retryWrites=true&w=majority"
+const DB_CONNECTION_STRING = "mongodb+srv://janineusana:mongodbjanine@cluster0.37gpaqg.mongodb.net/comp3123_assignment1?retryWrites=true&w=majority"
 mongoose.connect(DB_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true
